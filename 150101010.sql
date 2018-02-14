@@ -222,6 +222,7 @@ INSERT INTO Slot(letter, day, start_time, end_time) VALUES('E1','Friday','02:00:
 
 
 INSERT INTO Department(department_id , name) VALUES ('CSE','Computer Science and Engineering');
+INSERT INTO Department(department_id , name) VALUES ('CRT','Centre for Rural Technology');
 INSERT INTO Department(department_id , name) VALUES ('EEE','Electronics and Electrical Engineering');
 INSERT INTO Department(department_id , name) VALUES ('ME','Mechanical Engineering');
 INSERT INTO Department(department_id , name) VALUES ('CE','Civil Engineering');
