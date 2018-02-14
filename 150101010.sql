@@ -16,18 +16,37 @@ CREATE TABLE Slot(
 	end_time TIME
 );
 CREATE TABLE Room(
-	room_number VARCHAR(5),
+	room_number VARCHAR(15),
 	location VARCHAR(10)
 );
 CREATE TABLE ScheduledIn(
-
+	course_id VARCHAR(10) NOT NULL,
+	division VARCHAR(3) NOT NULL,
+	letter VARCHAR(2) NOT NULL,
+	day VARCHAR(10) NOT NULL,
+	department_id VARCHAR(10) NOT NULL,
+	room_number	VARCHAR(4) NOT NULL
 );
 
+CREATE TABLE ScheduledIn(
+	course_id VARCHAR(6) NOT NULL COMMENT 'course_id will be of length at most 6 (in case of minor courses), no default vaue being given since a course id will always be for a record',
+	division VARCHAR(3) NOT NULL DEFAULT 'NA' COMMENT 'division will be at most of length 3 (in case of III), default value of NA being given',
+	letter VARCHAR(2) NOT NULL COMMENT 'Letter can be of the form A, A1, hence varchar of length 2, no default value being assigned since it is to be used in primary key', 
+	day VARCHAR(9) NOT NULL COMMENT 'Day will have maximum length 9 (Wednesday), no default value assigned since it is to be used in primary key',
+	department_id VARCHAR(4) NOT NULL COMMENT 'department id will take at most 4 letters (BSBE), no default value provided since every course has a department id',
+	room_number VARCHAR(4) NOT NULL COMMENT 'room_number will take at most 4 characters, no default value being given since every class will be held in a room',
+	CONSTRAINT si_pk PRIMARY KEY(letter,day,room_number),
+	CONSTRAINT slot_fk FOREIGN KEY(letter,day) REFERENCES slot(letter,day) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT course_fk FOREIGN KEY(course_id,division) REFERENCES course(course_id,division) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT dep_fk FOREIGN KEY(department_id) REFERENCES department(department_id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT room_fk FOREIGN KEY(room_number) REFERENCES room(room_number) ON DELETE CASCADE ON UPDATE CASCADE
+	);
 
 -- INSERT INTO Course (course_id , division) VALUES ();
 -- INSERT INTO Department(department_id , name) VALUES ();
 -- INSERT INTO Slot(letter, day, start_time, end_time) VALUES();
 -- INSERT INTO Room(room_number, location) VALUES();
+-- 
 
 INSERT INTO Course (course_id , division) VALUES ('BT101',);
 INSERT INTO Course (course_id , division) VALUES ('BT202',);
@@ -114,6 +133,8 @@ INSERT INTO Room(room_number, location) VALUES('4211','Core-IV');
 INSERT INTO Room(room_number, location) VALUES('4212','Core-IV');
 INSERT INTO Room(room_number, location) VALUES('4G3','Core-IV');
 INSERT INTO Room(room_number, location) VALUES('4G4','Core-IV');
+INSERT INTO Room(room_number, location) VALUES('BDES 2 STUDIO','Core-I');
+INSERT INTO Room(room_number, location) VALUES('BDES 3 STUDIO','Core-I');
 
 
 
