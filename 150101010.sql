@@ -1,37 +1,37 @@
 create database 09feb2018;
 use 09feb2018;
 CREATE TABLE Course(
-	course_id VARCHAR(10),
-	division VARCHAR(3),
-	PRIMARY KEY (COURSE_ID, division)
+	course_id VARCHAR(10) COMMENT 'course_id will be of maximum length and can contian both characters and number so puttin a bound on it 10 is safe',
+	division VARCHAR(3) COMMENT 'division will be either I , II, III, IV',
+	PRIMARY KEY (COURSE_ID, division) COMMENT 'because their pair will always be unique'
 );
 
 CREATE TABLE Department(
-	department_id VARCHAR(10),
-	name VARCHAR(50),
-	PRIMARY KEY (department_id)
+	department_id VARCHAR(10) COMMENT 'department_id will range 2 to 4 so keep an upper bound 10 is used',
+	name VARCHAR(50) COMMENT 'The name of the department can be as long as it can be so keeping the upper bound to be 50',
+	PRIMARY KEY (department_id) COMMENT 'Every department will be have unique id and name'
 
 );
 CREATE TABLE Slot(
-	letter VARCHAR(2),
-	day VARCHAR(10),
-	start_time TIME,
-	end_time TIME,
-	PRIMARY KEY(letter,day)
+	letter VARCHAR(2) COMMENT 'slot can be 1 character or 2 maximum',
+	day VARCHAR(10) COMMENT 'day can be at most 8 characters',
+	start_time TIME COMMENT 'its time',
+	end_time TIME COMMENT 'its time',
+	PRIMARY KEY(letter,day) COMMENT 'letter and day both will form a unique key because a specific letter can come only once in a particular day'
 );
 CREATE TABLE Room(
-	room_number VARCHAR(17),
-	location VARCHAR(10),
-	PRIMARY KEY (room_number)
+	room_number VARCHAR(10) COMMENT 'ROOM NUMBER CAN BE AT MOST 4 CHARACTERS SO 10 is kept as upper bound ',
+	location VARCHAR(10) COMMENT 'LOCATION IS AT MOST 10 CHARACTERS',
+	PRIMARY KEY (room_number) COMMENT 'EVERY ROOM NUMBER WILL HAVE UNIQUE LOCATION'
 );
 CREATE TABLE ScheduledIn(
-	course_id VARCHAR(10) NOT NULL,
-	division VARCHAR(3) NOT NULL default 'NA',
-	letter VARCHAR(2) NOT NULL,
-	day VARCHAR(10) NOT NULL,
-	department_id VARCHAR(10) NOT NULL,
-	room_number VARCHAR(17) NOT NULL,
-	CONSTRAINT si_pk PRIMARY KEY(course_id,letter,day,room_number),
+	course_id VARCHAR(10) NOT NULL COMMENT 'course_id will be of maximum length and can contian both characters and number so puttin a bound on it 10 is safe',
+	division VARCHAR(3) NOT NULL default 'NA' COMMENT 'division will be either I , II, III, IV',
+	letter VARCHAR(2) NOT NULL COMMENT 'slot can be 1 character or 2 maximum',
+	day VARCHAR(10) NOT NULL COMMENT 'day can be at most 8 characters',
+	department_id VARCHAR(10) NOT NULL COMMENT 'department_id will range 2 to 4 so keep an upper bound 10 is used',
+	room_number VARCHAR(10) NOT NULL COMMENT 'ROOM NUMBER CAN BE AT MOST 4 CHARACTERS SO 10 is kept as upper bound ',
+	CONSTRAINT si_pk PRIMARY KEY(course_id,letter,day,room_number) COMMENT 'COURSE_ID LETTER DAY room_number WILL TOGETHER FORM A UNIQUE KEY',
 	CONSTRAINT slot_fk FOREIGN KEY(letter,day) REFERENCES Slot(letter,day) ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT course_fk FOREIGN KEY(course_id,division) REFERENCES Course(course_id,division) ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT dep_fk FOREIGN KEY(department_id) REFERENCES Department(department_id) ON DELETE CASCADE ON UPDATE CASCADE,
