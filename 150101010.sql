@@ -3,8 +3,7 @@ create database 09feb2018;
 use 09feb2018;
 CREATE TABLE Course(
 	course_id VARCHAR(10) COMMENT 'course_id will be of maximum length and can contian both characters and number so puttin a bound on it 10 is safe',
-	division VARCHAR(3)  COMMENT 'division will be either I , II, III, IV',
-	
+	division enum ('I','II','III','IV','NA') COMMENT 'division will be either I , II, III, IV,NA',
 	PRIMARY KEY (COURSE_ID, division) COMMENT 'because their pair will always be unique'
 );
 
@@ -15,22 +14,22 @@ CREATE TABLE Department(
 
 );
 CREATE TABLE Slot(
-	letter VARCHAR(2) COMMENT 'slot can be 1 character or 2 maximum',
-	day VARCHAR(10) COMMENT 'day can be at most 8 characters',
+	letter enum('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'A1', 'B1', 'C1', 'D1', 'E1') COMMENT 'letter can take the value from the given enum set',
+	day enum('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday') COMMENT 'day can take the value from the given enum set',
 	start_time TIME COMMENT 'its time',
 	end_time TIME COMMENT 'its time',
 	PRIMARY KEY(letter,day) COMMENT 'letter and day both will form a unique key because a specific letter can come only once in a particular day'
 );
 CREATE TABLE Room(
 	room_number VARCHAR(10) COMMENT 'ROOM NUMBER CAN BE AT MOST 4 CHARACTERS SO 10 is kept as upper bound ',
-	location VARCHAR(10) COMMENT 'LOCATION IS AT MOST 10 CHARACTERS',
+	location enum('Core-I', 'Core-II','Core-III', 'Core-IV', 'LH', 'Local') COMMENT 'location can take the value from the given enum set',
 	PRIMARY KEY (room_number) COMMENT 'EVERY ROOM NUMBER WILL HAVE UNIQUE LOCATION'
 );
 CREATE TABLE ScheduledIn(
 	course_id VARCHAR(10) NOT NULL COMMENT 'course_id will be of maximum length and can contian both characters and number so puttin a bound on it 10 is safe',
-	division VARCHAR(3) NOT NULL default 'NA' COMMENT 'division will be either I , II, III, IV',
-	letter VARCHAR(2) NOT NULL COMMENT 'slot can be 1 character or 2 maximum',
-	day VARCHAR(10) NOT NULL COMMENT 'day can be at most 8 characters',
+	division enum ('I','II','III','IV','NA') COMMENT 'division will be either I , II, III, IV,NA',
+	letter enum('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'A1', 'B1', 'C1', 'D1', 'E1') COMMENT 'letter can take the value from the given enum set',
+	day enum('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday') COMMENT 'day can take the value from the given enum set',
 	department_id VARCHAR(10) NOT NULL COMMENT 'department_id will range 2 to 4 so keep an upper bound 10 is used',
 	room_number VARCHAR(10) NOT NULL COMMENT 'ROOM NUMBER CAN BE AT MOST 4 CHARACTERS SO 10 is kept as upper bound ',
 	CONSTRAINT si_pk PRIMARY KEY(course_id,letter,day,room_number) COMMENT 'COURSE_ID LETTER DAY room_number WILL TOGETHER FORM A UNIQUE KEY',
