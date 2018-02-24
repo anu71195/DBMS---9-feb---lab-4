@@ -409,9 +409,8 @@ INSERT INTO Course (course_id , division) VALUES ('BT101', 'I'),
 INSERT INTO Room(room_number, location) VALUES('L1','LH'),
 ('L2','LH'),
 ('L3','LH'),
-('L4','LH');
-
-INSERT INTO Room(room_number, location) VALUES('1001','Core-I'),
+('L4','LH'),
+('1001','Core-I'),
 ('1002','Core-I'),
 ('1003','Core-I'),
 ('1004','Core-I'),
@@ -429,24 +428,20 @@ INSERT INTO Room(room_number, location) VALUES('1001','Core-I'),
 ('1204','Core-I'),
 ('1205','Core-I'),
 ('1206','Core-I'),
-('1207','Core-I');
-
-INSERT INTO Room(room_number, location) VALUES('2001','Core-II'),
+('1207','Core-I'),
+('2001','Core-II'),
 ('2002','Core-II'),
 ('2101','Core-II'),
 ('2102','Core-II'),
 ('2201','Core-II'),
 ('2202','Core-II'),
 ('2203','Core-II'),
-('2204','Core-II');
-
-
-INSERT INTO Room(room_number, location) VALUES('3003','Core-III'),
+('2204','Core-II'),
+('3003','Core-III'),
 ('3101','Core-III'),
 ('3102','Core-III'),
-('3202','Core-III');
-
-INSERT INTO Room(room_number, location) VALUES('4001','Core-IV'),
+('3202','Core-III'),
+('4001','Core-IV'),
 ('4002','Core-IV'),
 ('4003','Core-IV'),
 ('4004','Core-IV'),
@@ -490,73 +485,57 @@ INSERT INTO Room(room_number, location) VALUES('4001','Core-IV'),
 INSERT INTO Slot(letter, day, start_time, end_time) VALUES('A','Monday','08:00:00','08:55:00'),
 ('A','Tuesday','09:00:00','09:55:00'),
 ('A','Wednesday','10:00:00','10:55:00'),
-('A','Thursday','11:00:00','11:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('B','Monday','09:00:00','09:55:00'),
+('A','Thursday','11:00:00','11:55:00'),
+('B','Monday','09:00:00','09:55:00'),
 ('B','Tuesday','10:00:00','10:55:00'),
 ('B','Wednesday','11:00:00','11:55:00'),
-('B','Friday','08:00:00','08:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('C','Monday','10:00:00','10:55:00'),
+('B','Friday','08:00:00','08:55:00'),
+('C','Monday','10:00:00','10:55:00'),
 ('C','Tuesday','11:00:00','11:55:00'),
 ('C','Thursday','08:00:00','08:55:00'),
-('C','Friday','09:00:00','09:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('D','Monday','11:00:00','11:55:00'),
+('C','Friday','09:00:00','09:55:00'),
+('D','Monday','11:00:00','11:55:00'),
 ('D','Wednesday','08:00:00','08:55:00'),
 ('D','Thursday','09:00:00','09:55:00'),
-('D','Friday','10:00:00','10:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('E','Tuesday','08:00:00','08:55:00'),
+('D','Friday','10:00:00','10:55:00'),
+('E','Tuesday','08:00:00','08:55:00'),
 ('E','Wednesday','09:00:00','09:55:00'),
 ('E','Thursday','10:00:00','10:55:00'),
-('E','Friday','11:00:00','11:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('F','Monday','12:00:00','12:55:00'),
+('E','Friday','11:00:00','11:55:00'),
+('F','Monday','12:00:00','12:55:00'),
 ('F','Wednesday','12:00:00','12:55:00'),
-('F','Friday','12:00:00','12:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('G','Monday','01:00:00','01:55:00'),
+('F','Friday','12:00:00','12:55:00'),
+('G','Monday','01:00:00','01:55:00'),
 ('G','Wednesday','01:00:00','01:55:00'),
-('G','Friday','01:00:00','01:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('H','Tuesday','12:00:00','12:55:00'),
-('H','Thursday','12:00:00','12:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('I','Tuesday','12:00:00','1:25'),
-('I','Thursday','12:00:00','1:25');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('J','Tuesday','01:00:00','01:55:00'),
-('J','Thursday','01:00:00','01:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('K','Monday','05:00:00','05:55:00'),
+('G','Friday','01:00:00','01:55:00'),
+('H','Tuesday','12:00:00','12:55:00'),
+('H','Thursday','12:00:00','12:55:00'),
+('I','Tuesday','12:00:00','1:25'),
+('I','Thursday','12:00:00','1:25'),
+('J','Tuesday','01:00:00','01:55:00'),
+('J','Thursday','01:00:00','01:55:00'),
+('K','Monday','05:00:00','05:55:00'),
 ('K','Wednesday','05:00:00','05:55:00'),
-('K','Friday','05:00:00','05:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('L','Tuesday','05:00:00','06:25:00'),
-('L','Thursday','05:00:00','06:25:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('A1','Monday','05:00:00','05:55:00'),
+('K','Friday','05:00:00','05:55:00'),
+('L','Tuesday','05:00:00','06:25:00'),
+('L','Thursday','05:00:00','06:25:00'),
+('A1','Monday','05:00:00','05:55:00'),
 ('A1','Tuesday','04:00:00','04:55:00'),
 ('A1','Wednesday','03:00:00','03:55:00'),
-('A1','Thursday','02:00:00','02:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('B1','Monday','04:00:00','04:55:00'),
+('A1','Thursday','02:00:00','02:55:00'),
+('B1','Monday','04:00:00','04:55:00'),
 ('B1','Tuesday','03:00:00','03:55:00'),
 ('B1','Wednesday','02:00:00','02:55:00'),
-('B1','Friday','05:00:00','05:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('C1','Monday','03:00:00','03:55:00'),
+('B1','Friday','05:00:00','05:55:00'),
+('C1','Monday','03:00:00','03:55:00'),
 ('C1','Tuesday','02:00:00','02:55:00'),
 ('C1','Thursday','05:00:00','05:55:00'),
-('C1','Friday','04:00:00','04:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('D1','Monday','02:00:00','02:55:00'),
+('C1','Friday','04:00:00','04:55:00'),
+('D1','Monday','02:00:00','02:55:00'),
 ('D1','Wednesday','05:00:00','05:55:00'),
 ('D1','Thursday','04:00:00','04:55:00'),
-('D1','Friday','03:00:00','03:55:00');
-
-INSERT INTO Slot(letter, day, start_time, end_time) VALUES('E1','Tuesday','05:00:00','05:55:00'),
+('D1','Friday','03:00:00','03:55:00'),
+('E1','Tuesday','05:00:00','05:55:00'),
 ('E1','Wednesday','04:00:00','04:55:00'),
 ('E1','Thursday','03:00:00','03:55:00'),
 ('E1','Friday','02:00:00','02:55:00');
