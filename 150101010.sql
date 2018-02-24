@@ -43,7 +43,7 @@ CREATE TABLE ScheduledIn(
 -- 	division VARCHAR(3) NOT NULL DEFAULT 'NA' COMMENT 'division will be at most of length 3 (in case of III), default value of NA being given',
 -- 	letter VARCHAR(2) NOT NULL COMMENT 'Letter can be of the form A, A1, hence varchar of length 2, no default value being assigned since it is to be used in primary key', 
 -- 	day VARCHAR(9) NOT NULL COMMENT 'Day will have maximum length 9 (Wednesday), no default value assigned since it is to be used in primary key',
--- 	department_id VARCHAR(4) NOT NULL COMMENT 'department id will take at most 4 letters (BSBE), no default value provided since every course has a department id',
+-- 	department_id VARCHAR(4) NOT NULL COMMENT 'department id will take at most 4 letters (BT), no default value provided since every course has a department id',
 -- 	room_number VARCHAR(4) NOT NULL COMMENT 'room_number will take at most 4 characters, no default value being given since every class will be held in a room',
 -- 	CONSTRAINT si_pk PRIMARY KEY(letter,day,room_number),
 -- 	CONSTRAINT slot_fk FOREIGN KEY(letter,day) REFERENCES slot(letter,day) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -576,7 +576,7 @@ INSERT INTO Department(department_id , name) VALUES ('EEE','Electronics and Elec
 INSERT INTO Department(department_id , name) VALUES ('ME','Mechanical Engineering');
 INSERT INTO Department(department_id , name) VALUES ('CE','Civil Engineering');
 INSERT INTO Department(department_id , name) VALUES ('DD','Design');
-INSERT INTO Department(department_id , name) VALUES ('BSBE','Biosciences and Bioengineering');
+INSERT INTO Department(department_id , name) VALUES ('BT','Biosciences and Bioengineering');
 INSERT INTO Department(department_id , name) VALUES ('CL','Chemical Engineering');
 INSERT INTO Department(department_id , name) VALUES ('PH','Physics');
 INSERT INTO Department(department_id , name) VALUES ('CH','Chemistry');
@@ -626,7 +626,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH302','NA','A','Thursday','PH','4003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH408','NA','A','Thursday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH411','NA','A','Thursday','CH','4006');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT202','NA','A','Thursday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT202','NA','A','Thursday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH212','NA','A','Thursday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE201','NA','A','Thursday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL204','NA','A','Thursday','CL','4203');
@@ -634,7 +634,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH202','NA','A','Thursday','PH','4206');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE524','NA','A','Thursday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL503','NA','A','Thursday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT504','NA','A','Thursday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT504','NA','A','Thursday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH532','NA','A','Thursday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS424','NA','A','Thursday','HSS','4G3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS425','NA','A','Thursday','HSS','4G4');
@@ -666,7 +666,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH408','NA','A','Tuesday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH411','NA','A','Tuesday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE551','NA','A','Tuesday','EEE','4101');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT202','NA','A','Tuesday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT202','NA','A','Tuesday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH212','NA','A','Tuesday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE201','NA','A','Tuesday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL204','NA','A','Tuesday','CL','4203');
@@ -674,7 +674,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH206','NA','A','Tuesday','PH','4206');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE524','NA','A','Tuesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL503','NA','A','Tuesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT504','NA','A','Tuesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT504','NA','A','Tuesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH527','NA','A','Tuesday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS424','NA','A','Tuesday','HSS','4G3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS425','NA','A','Tuesday','HSS','4G4');
@@ -702,7 +702,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH306','NA','A','Wednesday','PH','4003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH402','NA','A','Wednesday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH411','NA','A','Wednesday','CH','4006');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT202','NA','A','Wednesday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT202','NA','A','Wednesday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH212','NA','A','Wednesday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE201','NA','A','Wednesday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL204','NA','A','Wednesday','CL','4203');
@@ -710,7 +710,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH204','NA','A','Wednesday','PH','4206');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE524','NA','A','Wednesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL503','NA','A','Wednesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT504','NA','A','Wednesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT504','NA','A','Wednesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE584','NA','A','Wednesday','CE','4211');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH527','NA','A','Wednesday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS424','NA','A','Wednesday','HSS','4G3');
@@ -729,7 +729,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE652','NA','A1','Monday','CE','3102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH637','NA','A1','Monday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE311','NA','A1','Monday','CE','4201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Monday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Monday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CS101','I','A1','Monday','CSE','L2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CS101','II','A1','Monday','CSE','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA625','NA','A1','Thursday','MA','1002');
@@ -748,7 +748,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH323','NA','A1','Thursday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE304','NA','A1','Thursday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL307','NA','A1','Thursday','CL','4203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Thursday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Thursday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE556','NA','A1','Thursday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL619','NA','A1','Thursday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE594','NA','A1','Thursday','CE','4211');
@@ -772,7 +772,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH323','NA','A1','Tuesday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE304','NA','A1','Tuesday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL307','NA','A1','Tuesday','CL','4203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Tuesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Tuesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE556','NA','A1','Tuesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL619','NA','A1','Tuesday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE594','NA','A1','Tuesday','CE','4211');
@@ -796,7 +796,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE673','NA','A1','Wednesday','EEE','4101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH323','NA','A1','Wednesday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL307','NA','A1','Wednesday','CL','4203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Wednesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT302','NA','A1','Wednesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE556','NA','A1','Wednesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL619','NA','A1','Wednesday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE594','NA','A1','Wednesday','CE','4211');
@@ -840,10 +840,10 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL205','NA','B','Monday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE612','NA','B','Monday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH204','NA','B','Monday','PH','4206');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT607','NA','B','Monday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT607','NA','B','Monday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE525','NA','B','Monday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL504','NA','B','Monday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT604','NA','B','Monday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT604','NA','B','Monday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE555','NA','B','Monday','CE','4211');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','III','B','Monday','ME','L2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','IV','B','Monday','ME','L3');
@@ -873,10 +873,10 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL205','NA','B','Tuesday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE612','NA','B','Tuesday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH204','NA','B','Tuesday','PH','4206');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT607','NA','B','Tuesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT607','NA','B','Tuesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE525','NA','B','Tuesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL504','NA','B','Tuesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT604','NA','B','Tuesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT604','NA','B','Tuesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE555','NA','B','Tuesday','CE','4211');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH523','NA','B','Tuesday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','III','B','Tuesday','ME','L2');
@@ -907,10 +907,10 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL205','NA','B','Wednesday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE612','NA','B','Wednesday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH206','NA','B','Wednesday','PH','4206');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT607','NA','B','Wednesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT607','NA','B','Wednesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE525','NA','B','Wednesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL504','NA','B','Wednesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT604','NA','B','Wednesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT604','NA','B','Wednesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE304','NA','B','Wednesday','CE','4211');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH521','NA','B','Wednesday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','III','B','Wednesday','ME','L2');
@@ -942,7 +942,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL308','NA','B1','Monday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE628','NA','B1','Monday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL618','NA','B1','Monday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT601','NA','B1','Monday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT601','NA','B1','Monday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','I','B1','Monday','ME','L2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','II','B1','Monday','ME','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA662','NA','B1','Tuesday','MA','1002');
@@ -965,7 +965,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL308','NA','B1','Tuesday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE628','NA','B1','Tuesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL618','NA','B1','Tuesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT601','NA','B1','Tuesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT601','NA','B1','Tuesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH531','NA','B1','Tuesday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','I','B1','Tuesday','ME','L2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','II','B1','Tuesday','ME','L3');
@@ -986,17 +986,17 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL308','NA','B1','Wednesday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE628','NA','B1','Wednesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL618','NA','B1','Wednesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT601','NA','B1','Wednesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT601','NA','B1','Wednesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','I','B1','Wednesday','ME','L2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME101','II','B1','Wednesday','ME','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA590','NA','C','Friday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME223','NA','C','Friday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME223','NA','C','Friday','ME','1005');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT630','NA','C','Friday','BSBE','1006');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT630','NA','C','Friday','BT','1006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS623','NA','C','Friday','HSS','1102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA271','NA','C','Friday','MA','1103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CS242','NA','C','Friday','CSE','1201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT632','NA','C','Friday','BSBE','1207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT632','NA','C','Friday','BT','1207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL639','NA','C','Friday','CL','1G1');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME609','NA','C','Friday','ME','1G2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE671','NA','C','Friday','EEE','2101');
@@ -1011,12 +1011,12 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH438','NA','C','Friday','CE','4005');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH432','NA','C','Friday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE551','NA','C','Friday','EEE','4101');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Friday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Friday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH232','NA','C','Friday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE206','NA','C','Friday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE646','NA','C','Friday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH443','NA','C','Friday','PH','4206');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Friday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Friday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE661','NA','C','Friday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH532','NA','C','Friday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE552','NA','C','Friday','CE','4G3');
@@ -1028,11 +1028,11 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME223','NA','C','Monday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME513','NA','C','Monday','ME','1004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME223','NA','C','Monday','ME','1005');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT630','NA','C','Monday','BSBE','1006');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT630','NA','C','Monday','BT','1006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS503','NA','C','Monday','HSS','1101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA271','NA','C','Monday','MA','1103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CS242','NA','C','Monday','CSE','1201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT632','NA','C','Monday','BSBE','1207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT632','NA','C','Monday','BT','1207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL639','NA','C','Monday','CL','1G1');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME609','NA','C','Monday','ME','1G2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE671','NA','C','Monday','EEE','2101');
@@ -1047,12 +1047,12 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH406','NA','C','Monday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH438','NA','C','Monday','CE','4005');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH432','NA','C','Monday','CH','4006');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Monday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Monday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH232','NA','C','Monday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE206','NA','C','Monday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE584','NA','C','Monday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH443','NA','C','Monday','PH','4206');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Monday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Monday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE646','NA','C','Monday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH532','NA','C','Monday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE552','NA','C','Monday','CE','4G3');
@@ -1083,12 +1083,12 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME223','NA','C','Tuesday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME691','NA','C','Tuesday','ME','1004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME223','NA','C','Tuesday','ME','1005');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT630','NA','C','Tuesday','BSBE','1006');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT630','NA','C','Tuesday','BT','1006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS503','NA','C','Tuesday','HSS','1101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA271','NA','C','Tuesday','MA','1103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CS242','NA','C','Tuesday','CSE','1201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME532','NA','C','Tuesday','ME','1203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT632','NA','C','Tuesday','BSBE','1207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT632','NA','C','Tuesday','BT','1207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL639','NA','C','Tuesday','CL','1G1');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME609','NA','C','Tuesday','ME','1G2');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE671','NA','C','Tuesday','EEE','2101');
@@ -1104,13 +1104,13 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH402','NA','C','Tuesday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH438','NA','C','Tuesday','CE','4005');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH432','NA','C','Tuesday','CH','4006');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Tuesday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Tuesday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH232','NA','C','Tuesday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE206','NA','C','Tuesday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL207','NA','C','Tuesday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE583','NA','C','Tuesday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH443','NA','C','Tuesday','PH','4206');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Tuesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT205','NA','C','Tuesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE661','NA','C','Tuesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE646','NA','C','Tuesday','CE','4211');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH543','NA','C','Tuesday','PH','4212');
@@ -1133,7 +1133,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH617','NA','C1','Friday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE634','NA','C1','Friday','EEE','4101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE308','NA','C1','Friday','CE','4201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT308','NA','C1','Friday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT308','NA','C1','Friday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE664','NA','C1','Friday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE614','NA','C1','Friday','CE','4211');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH543','NA','C1','Friday','PH','4212');
@@ -1154,7 +1154,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH617','NA','C1','Monday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE634','NA','C1','Monday','EEE','4101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL309','NA','C1','Monday','CL','4203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT308','NA','C1','Monday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT308','NA','C1','Monday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE664','NA','C1','Monday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL617','NA','C1','Monday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE614','NA','C1','Monday','CE','4211');
@@ -1190,7 +1190,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH617','NA','C','	Tuesday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE634','NA','C','	Tuesday','EEE','4101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE308','NA','C','	Tuesday','CE','4201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT308','NA','C','	Tuesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT308','NA','C','	Tuesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE664','NA','C','	Tuesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL617','NA','C','	Tuesday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE614','NA','C','	Tuesday','CE','4211');
@@ -1221,10 +1221,10 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH202','NA','D','Friday','PH','4206');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE510','NA','D','Friday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL404','NA','D','Friday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT609','NA','D','Friday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT609','NA','D','Friday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH524','NA','D','Friday','PH','4212');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Friday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Friday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Friday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Friday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA547','NA','D','Monday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME224','NA','D','Monday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME691','NA','D','Monday','ME','1004');
@@ -1245,7 +1245,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH410','NA','D','Monday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH433','NA','D','Monday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE652','NA','D','Monday','EEE','4101');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT208','NA','D','Monday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT208','NA','D','Monday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH233','NA','D','Monday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH418','NA','D','Monday','CH','4104');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE205','NA','D','Monday','CE','4201');
@@ -1254,10 +1254,10 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH202','NA','D','Monday','PH','4206');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE510','NA','D','Monday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL404','NA','D','Monday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT609','NA','D','Monday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT609','NA','D','Monday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH523','NA','D','Monday','PH','4212');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Monday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Monday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Monday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Monday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA547','NA','D','Thursday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME224','NA','D','Thursday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME691','NA','D','Thursday','ME','1004');
@@ -1275,17 +1275,17 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH306','NA','D','Thursday','PH','4003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH406','NA','D','Thursday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH433','NA','D','Thursday','CH','4006');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT208','NA','D','Thursday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT208','NA','D','Thursday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH233','NA','D','Thursday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH418','NA','D','Thursday','CH','4104');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE205','NA','D','Thursday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH204','NA','D','Thursday','PH','4206');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE510','NA','D','Thursday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL404','NA','D','Thursday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT609','NA','D','Thursday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT609','NA','D','Thursday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH524','NA','D','Thursday','PH','4212');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Thursday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Thursday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Thursday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Thursday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA547','NA','D','Wednesday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME615','NA','D','Wednesday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME686','NA','D','Wednesday','ME','1004');
@@ -1302,12 +1302,12 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL642','NA','D','Wednesday','CL','4002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH410','NA','D','Wednesday','PH','4004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE221','NA','D','Wednesday','EEE','4101');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT208','NA','D','Wednesday','BSBE','4102');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT208','NA','D','Wednesday','BT','4102');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH202','NA','D','Wednesday','PH','4206');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL612','NA','D','Wednesday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH531','NA','D','Wednesday','PH','4212');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Wednesday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Wednesday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','III','D','Wednesday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','IV','D','Wednesday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA762','NA','D1','Friday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME616','NA','D1','Friday','ME','1004');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA671','NA','D1','Friday','MA','1103');
@@ -1324,11 +1324,11 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE631','NA','D1','Friday','EEE','4101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH322','NA','D1','Friday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE309','NA','D1','Friday','CE','4201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT305','NA','D1','Friday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT305','NA','D1','Friday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE595','NA','D1','Friday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH544','NA','D1','Friday','PH','4212');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Friday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Friday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Friday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Friday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA762','NA','D1','Monday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME323','NA','D1','Monday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME323','NA','D1','Monday','ME','1005');
@@ -1348,11 +1348,11 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH322','NA','D1','Monday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE308','NA','D1','Monday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL314','NA','D1','Monday','CL','4203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT305','NA','D1','Monday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT305','NA','D1','Monday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE595','NA','D1','Monday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL614','NA','D1','Monday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Monday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Monday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Monday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Monday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA762','NA','D1','Thursday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME323','NA','D1','Thursday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME553','NA','D1','Thursday','ME','1004');
@@ -1374,11 +1374,11 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH322','NA','D1','Thursday','CH','4103');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE309','NA','D1','Thursday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL314','NA','D1','Thursday','CL','4203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT305','NA','D1','Thursday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT305','NA','D1','Thursday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL617','NA','D1','Thursday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH545','NA','D1','Thursday','PH','4212');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Thursday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Thursday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Thursday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Thursday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA762','NA','D1','Wednesday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME323','NA','D1','Wednesday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME323','NA','D1','Wednesday','ME','1005');
@@ -1391,8 +1391,8 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL622','NA','D1','Wednesday','CL','4002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE309','NA','D1','Wednesday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL614','NA','D1','Wednesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Wednesday','BSBE','L2');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Wednesday','BSBE','L3');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','I','D1','Wednesday','BT','L2');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT101','II','D1','Wednesday','BT','L3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA591','NA','E','Friday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME605','NA','E','Friday','ME','1005');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS203','NA','E','Friday','HSS','1006');
@@ -1419,7 +1419,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS237','NA','E','Friday','HSS','4005');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH428','NA','E','Friday','CH','4104');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE648','NA','E','Friday','CE','4201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT401','NA','E','Friday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT401','NA','E','Friday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL401','NA','E','Friday','CL','4209');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH521','NA','E','Friday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS238','NA','E','Friday','HSS','4G3');
@@ -1452,9 +1452,9 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH428','NA','E','Thursday','CH','4104');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE648','NA','E','Thursday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE584','NA','E','Thursday','CE','4205');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT401','NA','E','Thursday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT401','NA','E','Thursday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL401','NA','E','Thursday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT502','NA','E','Thursday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT502','NA','E','Thursday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH523','NA','E','Thursday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS238','NA','E','Thursday','HSS','4G3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS239','NA','E','Thursday','HSS','4G4');
@@ -1503,9 +1503,9 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH428','NA','E','Wednesday','CH','4104');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE648','NA','E','Wednesday','CE','4201');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE583','NA','E','Wednesday','CE','4205');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT401','NA','E','Wednesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT401','NA','E','Wednesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL401','NA','E','Wednesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT502','NA','E','Wednesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT502','NA','E','Wednesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH524','NA','E','Wednesday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS238','NA','E','Wednesday','HSS','4G3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('HS239','NA','E','Wednesday','HSS','4G4');
@@ -1528,7 +1528,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH446','NA','E1','Friday','PH','4005');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH640','NA','E1','Friday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE646','NA','E1','Friday','EEE','4101');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT306','NA','E1','Friday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT306','NA','E1','Friday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH545','NA','E1','Friday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE657','NA','E1','Friday','EEE','L1');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH102','I','E1','Friday','PH','L2');
@@ -1552,7 +1552,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH640','NA','E1','Thursday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE646','NA','E1','Thursday','EEE','4101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE311','NA','E1','Thursday','CE','4201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT306','NA','E1','Thursday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT306','NA','E1','Thursday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH543','NA','E1','Thursday','PH','4212');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE657','NA','E1','Thursday','EEE','L1');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH102','I','E1','Thursday','PH','L2');
@@ -1592,7 +1592,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CH640','NA','E1','Wednesday','CH','4006');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE646','NA','E1','Wednesday','EEE','4101');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE311','NA','E1','Wednesday','CE','4201');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT306','NA','E1','Wednesday','BSBE','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT306','NA','E1','Wednesday','BT','4207');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE623','NA','E1','Wednesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('EE657','NA','E1','Wednesday','EEE','L1');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('PH102','I','E1','Wednesday','PH','L2');
@@ -1610,7 +1610,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL252M','NA','F','Friday','CL','4002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL635','NA','F','Friday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL630','NA','F','Friday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT613','NA','F','Friday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT613','NA','F','Friday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('DD220M','NA','F','Friday','DD','BD2S');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME618','NA','F','Monday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME514','NA','F','Monday','ME','1004');
@@ -1629,7 +1629,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE615','NA','F','Monday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE570','NA','F','Monday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL630','NA','F','Monday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT613','NA','F','Monday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT613','NA','F','Monday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('DD220M','NA','F','Monday','DD','BD2S');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME607','NA','F','Wednesday','ME','1003');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME680','NA','F','Wednesday','ME','1005');
@@ -1646,7 +1646,7 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL635','NA','F','Wednesday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE570','NA','F','Wednesday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL630','NA','F','Wednesday','CL','4209');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT613','NA','F','Wednesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT613','NA','F','Wednesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE615','NA','F','Wednesday','CE','4211');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('DD220M','NA','F','Wednesday','DD','BD2S');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('ME321','NA','G','Friday','ME','1003');
@@ -1689,21 +1689,21 @@ INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number)
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE570','NA','H','Tuesday','CE','4205');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CE661','NA','H','Tuesday','CE','4208');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA685','NA','I','Thursday','MA','1104');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT618','NA','I','Thursday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT618','NA','I','Thursday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA685','NA','I','Tuesday','MA','1104');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT618','NA','I','Tuesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT618','NA','I','Tuesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL309','NA','J','Thursday','CL','4203');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL309','NA','J','Tuesday','CL','4203');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT637','NA','K','Friday','BSBE','4207');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT629','NA','K','Friday','BSBE','4210');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT637','NA','K','Monday','BSBE','4207');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT629','NA','K','Monday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT637','NA','K','Friday','BT','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT629','NA','K','Friday','BT','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT637','NA','K','Monday','BT','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT629','NA','K','Monday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL639','NA','K','Monday','CL','4G4');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT637','NA','K','Wednesday','BSBE','4207');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT629','NA','K','Wednesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT637','NA','K','Wednesday','BT','4207');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT629','NA','K','Wednesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL639','NA','K','Wednesday','CL','4G4');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA616','NA','L','Thursday','MA','1002');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL625','NA','L','Thursday','CL','4G3');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('MA616','NA','L','Tuesday','MA','1002');
-INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT616','NA','L','Tuesday','BSBE','4210');
+INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('BT616','NA','L','Tuesday','BT','4210');
 INSERT INTO ScheduledIn(course_id,division,letter,day,department_id,room_number) VALUES ('CL625','NA','L','Tuesday','CL','4G3');
