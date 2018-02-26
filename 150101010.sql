@@ -9,7 +9,7 @@ CREATE TABLE Course(
 
 CREATE TABLE Department(
 	department_id VARCHAR(10) COMMENT 'department_id will range 2 to 4 so keep an upper bound 10 is used',
-	name VARCHAR(50) COMMENT 'The name of the department can be as long as it can be so keeping the upper bound to be 50',
+	name VARCHAR(100) COMMENT 'The name of the department can be as long as it can be so keeping the upper bound to be 100',
 	PRIMARY KEY (department_id) COMMENT 'Every department will be have unique id and name'
 
 );
